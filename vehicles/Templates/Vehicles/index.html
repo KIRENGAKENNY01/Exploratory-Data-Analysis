@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vehicle ML Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .scrollspy-example {
+            height: 80vh;
+            overflow-y: scroll;
+            position: relative;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#dashboard-nav" data-bs-offset="100" tabindex="0">
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-md-3">
+                <div id="dashboard-nav" class="list-group position-sticky top-0">
+                    <a class="list-group-item list-group-item-action" href="#frequency-table">Frequency Tables (One-way)
+                    </a>
+                     <a class="list-group-item list-group-item-action" href="#dataset-preview">Dataset Preview 
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#aggregated-data">Aggregated Data
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#crossed-table">Crossed Table
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#pivot-table">Pivot Table
+                    </a>
+                     <a class="list-group-item list-group-item-action" href="#sunburst_chart">Sunburst Chart
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#treemap_chart">Treemap Chart
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#frequency_bar_chart">Frequency Bar Chart
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div class="col-md-9">
+                <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#dashboard-nav"
+                    data-bs-smooth-scroll="true" tabindex="0">
+                    <h1 class="text-center text-primary mb-4"> Vehicle Machine Learning Dashboard </h1>
+                    <div id="frequency-table" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Frequency Tables (One-way)
+                        </div>
+                        <div class="card-body">
+                            {{ frequency_table|safe }}
+                        </div>
+
+                         <div id="dataset-preview" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Dataset preview
+                        </div>
+                        <div class="card-body">
+                            {{ my_dataset|safe }}
+                        </div>
+
+                          <div id="aggregated-data" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Aggregated Data
+                        </div>
+                        <div class="card-body">
+                            {{ aggregated_data |safe }}
+                        </div>
+
+
+                        
+                          <div id="crossed-table" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Crossed Table
+                        </div>
+                        <div class="card-body">
+                            {{ crossed_table |safe }}
+                        </div>
+
+                          <div id="pivot-table" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Pivot Table
+                        </div>
+                        <div class="card-body">
+                            {{ pivot_table |safe }}
+                        </div>
+
+                            <div id="sunburst-chart" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Sunburst Chart
+                        </div>
+                        <div class="card-body">
+                            {{ Sunbust_chart |safe }}
+                        </div>
+
+
+                            <div id="treemap-chart" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Treemap Chart
+                        </div>
+                        <div class="card-body">
+                            {{ Treemap_chart |safe }}
+                        </div>
+                        
+                        <div id="frequency-bar-chart" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Frequency Bar Chart
+                        </div>
+                        <div class="card-body">
+                            {{ frequency_bar_chart |safe }}
+                        </div>
+
+
+                         <div id="frequency-bar-chart" class="card shadow mb-5">
+                        <div class="card-header bg-info text-white">
+                            Visualize bar chart
+                        </div>
+                        <div class="card-body">
+                            {{ visualize_map |safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
