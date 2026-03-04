@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-bd^d31&ql9m6zcgsi0(g8gu4p3-)frs%lyk$=!=dhs*3%=k(!+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'exploratory-data-analysis-nufa.onrender.com'
+]
 
 
 # Application definition
